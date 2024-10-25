@@ -11,7 +11,14 @@
 <body>
     <header>
         <h1>Loja de Eletrônicos</h1>
-        <nav>
+        <!-- Menu "Hambúrguer" para dispositivos móveis -->
+        <div class="menu-icon" id="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- Menu de navegação principal -->
+        <nav id="mobile-nav" class="mobile-nav">
             <a href="index.html">Home</a>
             <a href="#" id="open-cart">Carrinho (<span id="cart-count">0</span>)</a>
             <!-- Meu Perfil com menu suspenso -->
@@ -37,7 +44,7 @@
             
             <div class="product" data-id="1">
                 <h3>Smartphone</h3>
-                <p>Smartphone com tela de 6.5", 128GB de armazenamento e câmera de 48MP.</p>
+                <p>Smartphone com tela de 6.5", 128GB e câmera de 48MP.</p>
                 <p><strong>R$ 2000,00</strong></p>
                 <button class="add-to-cart">Adicionar ao Carrinho</button>
             </div>
@@ -49,7 +56,7 @@
             </div>
             <div class="product" data-id="3">
                 <h3>Fone de Ouvido</h3>
-                <p>Fone de ouvido sem fio com cancelamento de ruído e bateria de longa duração.</p>
+                <p>Fone de ouvido sem fio com cancelamento de ruído.</p>
                 <p><strong>R$ 1000,00</strong></p>
                 <button class="add-to-cart">Adicionar ao Carrinho</button>
             </div>
