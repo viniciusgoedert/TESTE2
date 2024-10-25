@@ -84,70 +84,11 @@ document.getElementById('checkout').addEventListener('click', () => {
     if (cartItems.length === 0) {
         alert('Seu carrinho está vazio. Adicione itens antes de finalizar o pedido.');
     } else {
-        const orders = getOrders();
-        const order = {
-            items: cartItems,
-            date: new Date().toLocaleString() // Data e hora da finalização
-        };
-        orders.push(order);
-        saveOrders(orders);
-
         alert('Pedido finalizado com sucesso!');
-
         // Limpa o carrinho após finalizar o pedido
         localStorage.removeItem('cartItems');
         cartCount = 0;
         document.getElementById('cart-count').innerText = cartCount;
         closeCart();
     }
-});
-
-// Função para obter pedidos do localStorage
-function getOrders() {
-    const orders = localStorage.getItem('orders');
-    return orders ? JSON.parse(orders) : [];
-}
-
-// Função para salvar pedidos no localStorage
-function saveOrders(orders) {
-    localStorage.setItem('orders', JSON.stringify(orders));
-}
-
-// Evento para exibir pedidos ao clicar em "Meus Pedidos"
-document.getElementById('meus-pedidos').addEventListener('click', (e) => {
-    e.preventDefault(); // Previne o comportamento padrão do link
-
-    const orderList = document.getElementById('pedido-lista');
-    const orders = getOrders();
-
-    // Limpa a lista de pedidos anterior
-    orderList.innerHTML = ''; 
-
-    // Verifica se há pedidos
-    if (orders.length === 0) {
-        document.getElementById('empty-orders-message').style.display = 'block';
-    } else {
-        document.getElementById('empty-orders-message').style.display = 'none';
-
-        // Adiciona cada pedido à lista
-        orders.forEach(order => {
-            const orderDiv = document.createElement('div');
-            const orderDate = document.createElement('p');
-            orderDate.innerText = `Pedido finalizado em: ${order.date}`;
-            
-            const itemList = document.createElement('ul');
-            order.items.forEach(item => {
-                const li = document.createElement('li');
-                li.innerText = item.name;
-                itemList.appendChild(li);
-            });
-
-            orderDiv.appendChild(orderDate);
-            orderDiv.appendChild(itemList);
-            orderList.appendChild(orderDiv);
-        });
-    }
-
-    // Adiciona a classe 'show' para exibir a lista
-    orderList.classList.add('show');
 });
