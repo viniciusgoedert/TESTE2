@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Eletrônicos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>Loja de Eletrônicos</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#" id="open-cart">Carrinho (<span id="cart-count">0</span>)</a>
+            <!-- Meu Perfil com menu suspenso -->
+            <div class="profile-menu">
+                <button id="profile-button">Meu Perfil &#x25BC;</button>
+                <div class="profile-dropdown">
+                    <a href="#" id="meus-pedidos">Meus Pedidos</a>
+                    <div id="pedido-lista" class="pedido-dropdown">
+                        <p id="empty-orders-message">Nenhum pedido finalizado.</p>
+                    </div>
+                    <a href="#">Dados Pessoais</a>
+                </div>
+            </div>
+        </nav>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar...">
+            <button id="search-button">Pesquisar</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="product-list" id="product-list">
+            
+            <div class="product" data-id="1">
+                <h3>Smartphone</h3>
+                <p>Smartphone com tela de 6.5", 128GB de armazenamento e câmera de 48MP.</p>
+                <p><strong>R$ 2000,00</strong></p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" data-id="2">
+                <h3>Notebook</h3>
+                <p>Notebook com processador Intel i7, 16GB de RAM e 512GB SSD.</p>
+                <p><strong>R$ 3000,00</strong></p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" data-id="3">
+                <h3>Fone de Ouvido</h3>
+                <p>Fone de ouvido sem fio com cancelamento de ruído e bateria de longa duração.</p>
+                <p><strong>R$ 1000,00</strong></p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" data-id="4">
+                <h3>Smartwatch</h3>
+                <p>Smartwatch com monitoramento de saúde, GPS e conectividade Bluetooth.</p>
+                <p><strong>R$ 2300,00</strong></p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" data-id="5">
+                <h3>Tablet</h3>
+                <p>Tablet com tela de 10", 64GB de armazenamento e suporte a caneta.</p>
+                <p><strong>R$ 4000,00</strong></p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" data-id="6">
+                <h3>Caixa de Som Bluetooth</h3>
+                <p>Caixa de som portátil com som de alta qualidade e resistência à água.</p>
+                <p><strong>R$ 1500,00</strong></p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" data-id="7">
+                <h3>Câmera Digital</h3>
+                <p>Câmera digital de alta resolução com zoom óptico de 10x e gravação 4K.</p>
+                <p><strong>R$ 2700,00</strong></p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" data-id="8">
+                <h3>Monitor 4K</h3>
+                <p>Monitor 4K de 27" com cores vivas e suporte para HDR.</p>
+                <p><strong>R$ 5000,00</strong></p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" data-id="9">
+                <h3>Impressora </h3>
+                <p>Impressora com impressão, cópia e digitalização em alta velocidade.</p>
+                <p><strong>R$ 1200,00</strong></p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" data-id="10">
+                <h3>Drone</h3>
+                <p>Drone com câmera HD e controle remoto de longo alcance.</p>
+                <p><strong>R$ 3000,00</strong></p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal do Carrinho -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Seu Carrinho</h2>
+            <ul id="cart-items"></ul>
+            <p id="empty-cart-message">Seu carrinho está vazio.</p>
+            <button id="clear-cart">Limpar Carrinho</button>
+            <button id="checkout">Finalizar Pedido</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p><strong>Loja de Eletrônicos</strong></p>
+            <p>Email: <a href="mailto:contato@lojaeletronicos.com">contato@lojaeletronicos.com</a></p>
+            <p>Telefone: <a href="tel:+551112345678"> (11) 1234-5678</a></p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Loja de Eletrônicos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
